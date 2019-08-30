@@ -1,0 +1,113 @@
+body{
+    font-family: 'Noto Sans', Arial, serif;
+    font-weight: 400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height: 1.618em;
+    background: #32a89e url('cover.jpeg') center center no-repeat fixed;
+    background-size: cover;
+    height: 100%;
+}
+/*loader*/
+#loading{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:99999;
+  }
+.loader {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #14dae0;
+    letter-spacing: 0.2em;
+}
+.loader::before, .loader::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #14dae0;
+    position: absolute;
+    animation: load 0.7s infinite alternate ease-in-out;
+}
+.loader::before {
+    top: 0;
+}
+.loader::after {
+    bottom: 0;
+}
+@keyframes load {
+    0% {
+        left: 0;
+        height: 30px;
+        width: 15px;
+   }
+    50% {
+        height: 8px;
+        width: 40px;
+   }
+    100% {
+        left: 235px;
+        height: 30px;
+        width: 15px;
+   }
+}/*loader complete*/
+h2{
+    font-family: 'Noto Sans', Arial, serif;
+    font-weight: 700;
+    font-size:40px;
+    line-height: 1.618em;
+}
+section{
+    max-width:800px;
+    margin:8% auto 5em auto;
+    background-color:#222;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    color:#fff;
+    padding:1em 5%;
+}
+
+a{
+    color: rgb(11, 44, 27);
+}
+a:focus{
+    outline:none;
+    outline-offset:inherit;
+}
+@media (max-device-width: 1027px) {
+
+    body{
+        text-align:center;
+        font-size:larger;
+    }
+    section{
+        max-width: 90%;
+    }
+
+}
+
+@media (max-device-width: 640px) {
+    section{
+        max-width: 97%;
+    }
+
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.01rem;
+    text-align: center;
+  }
